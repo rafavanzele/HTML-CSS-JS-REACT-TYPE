@@ -1,0 +1,16 @@
+#box-model {
+    width: 450px;
+    height: 450px;
+    margin: 50px;
+    padding: 30px;
+    box-sizing: border-box;
+    border: 6px dashed #e68507;
+    border-radius: 25px;
+    outline: 6px dashed #e60789;
+    background-color: #e6850744;
+}
+
+.title {
+    color: #2c2c2c;
+    background-color: #e6850744;
+}

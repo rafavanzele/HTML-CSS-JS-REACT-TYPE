@@ -35,11 +35,6 @@
                 </div>
 
                 <div class="box-input">
-                    <label for="description">Detalhes <span class="required-field">*</span></label>
-                    <textarea name="description" id="description" class="block" placeholder="Use essa área para descrever detalhes do imóvel que você acredite ser importante avisar..."></textarea>
-                </div>
-
-                <div class="box-input">
                     <label for="metragem">Metragem do imóvel (m²) <span class="required-field">*</span></label>
                     <input type="number" name="metragem" id="metragem" class="block" placeholder="Digite a metragem em m² do imóvel" minlength="1" maxlength="30" required>
                 </div>
@@ -61,7 +56,7 @@
                     <label for="apartamento">Apartamento</label>
                 </div>
 
-                <div>
+                <div class="box-input">
                     <p>Quantidade de còmodos <span class="required-field">*</span></p>
                     <input type="radio" id="comodos" name="modelo" >
                     <label for="comodos">2 cômodos</label>
@@ -73,7 +68,7 @@
                     <label for="maiscomodos">+ 3 cômodos</label>
                 </div>
 
-                <div>
+                <div class="box-input">
                     <p>Quantidade de quartos <span class="required-field">*</span></p>
                     <input type="radio" id="quartos" name="modelo" >
                     <label for="quartos">Um quarto</label>
@@ -86,8 +81,8 @@
                 </div>
 
                 <div class="optional-box">
-                    <p>Adicionais</p>
-                    <ul class="opitional-list">
+                    <p>Adicionais <span class="required-field">*</span></p>
+                    <ul class="optional-list">
                         <li>
                             <input type="checkbox" id="quintal" name="optional[]" value="quintal">
                             <label for="quintal">Quintal</label>
@@ -102,7 +97,7 @@
                 </div>
 
                 <div class="optional-box">
-                    <ul class="opitional-list">
+                    <ul class="optional-list">
                         <li>
                             <input type="checkbox" id="moveis-planejados" name="optional[]" value="moveis-planejados">
                             <label for="moveis-planejados">Móveis planejados</label>
@@ -114,6 +109,11 @@
                             <label for="garagem">Área de garagem</label>
                         </li>
                     </ul>
+                </div>
+
+                <div class="box-input">
+                    <label for="description">Detalhes <span class="required-field">*</span></label>
+                    <textarea name="description" id="description" class="block" placeholder="Use essa área para descrever detalhes do imóvel que você acredite ser importante avisar (por exemplo piscina, etc)"></textarea>
                 </div>
 
                 <div class="box-input">

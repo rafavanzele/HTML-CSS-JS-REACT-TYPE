@@ -26,10 +26,103 @@
             <form>
                 <div class="box-input">
                     <label for="title">Título do anúncio <span class="required-field">*</span></label>
-                    <input type="text" name="title" id="title" class="block" placeholder="Um título para anunciar seu imóvel" minlength="5" maxlength="50" required>
+                    <input type="text" name="title" id="title" class="block" placeholder="Um título para anunciar seu imóvel" minlength="1" maxlength="30" required>
                 </div>
 
-                <input type="submit" value="Enviar">
+                <div class="box-input">
+                    <label for="price">Preço <span class="required-field">*</span></label>
+                    <input type="number" name="price" id="price" class="block" placeholder="Defina o preço" required>
+                </div>
+
+                <div class="box-input">
+                    <label for="description">Detalhes <span class="required-field">*</span></label>
+                    <textarea name="description" id="description" class="block" placeholder="Use essa área para descrever detalhes do imóvel que você acredite ser importante avisar..."></textarea>
+                </div>
+
+                <div class="box-input">
+                    <label for="metragem">Metragem do imóvel (m²) <span class="required-field">*</span></label>
+                    <input type="number" name="metragem" id="metragem" class="block" placeholder="Digite a metragem em m² do imóvel" minlength="1" maxlength="30" required>
+                </div>
+
+                <div class="box-input">
+                    <label for="metragem-terreno">Metragem do terreno (m²) <span class="required-field">*</span></label>
+                    <input type="number" name="metragem-terreno" id="metragem-terreno" class="block" placeholder="Caso seja apartamento, coloque 0 (zero)" minlength="1" maxlength="30" required>
+                </div>
+
+                <div class="box-input">
+                    <p>Modelo de imóvel <span class="required-field">*</span></p>
+                    <input type="radio" id="terreo" name="modelo" >
+                    <label for="terreo">Térreo</label>
+
+                    <input type="radio" id="sobrado" name="modelo" >
+                    <label for="sobrado">Sobrado</label>
+
+                    <input type="radio" id="apartamento" name="modelo" >
+                    <label for="apartamento">Apartamento</label>
+                </div>
+
+                <div>
+                    <p>Quantidade de còmodos <span class="required-field">*</span></p>
+                    <input type="radio" id="comodos" name="modelo" >
+                    <label for="comodos">2 cômodos</label>
+
+                    <input type="radio" id="3comodos" name="modelo" >
+                    <label for="3comodos">3 cômodos</label>
+
+                    <input type="radio" id="maiscomodos" name="modelo" >
+                    <label for="maiscomodos">+ 3 cômodos</label>
+                </div>
+
+                <div>
+                    <p>Quantidade de quartos <span class="required-field">*</span></p>
+                    <input type="radio" id="quartos" name="modelo" >
+                    <label for="quartos">Um quarto</label>
+
+                    <input type="radio" id="2quartos" name="modelo" >
+                    <label for="2quartos">Dois quartos</label>
+
+                    <input type="radio" id="mais-quartos" name="modelo" >
+                    <label for="mais-quartos">+ 2 quartos</label>
+                </div>
+
+                <div class="optional-box">
+                    <p>Adicionais</p>
+                    <ul class="opitional-list">
+                        <li>
+                            <input type="checkbox" id="quintal" name="optional[]" value="quintal">
+                            <label for="quintal">Quintal</label>
+
+                            <input type="checkbox" id="suite" name="optional[]" value="suite">
+                            <label for="suite">Suíte</label>
+
+                            <input type="checkbox" id="lazer" name="optional[]" value="lazer">
+                            <label for="lazer">Área de lazer</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="optional-box">
+                    <ul class="opitional-list">
+                        <li>
+                            <input type="checkbox" id="moveis-planejados" name="optional[]" value="moveis-planejados">
+                            <label for="moveis-planejados">Móveis planejados</label>
+
+                            <input type="checkbox" id="reforma" name="optional[]" value="reforma">
+                            <label for="reforma">Recém reformado</label>
+
+                            <input type="checkbox" id="garagem" name="optional[]" value="garagem">
+                            <label for="garagem">Área de garagem</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="box-input">
+                    <p>Fotos do imóvel <span class="required-field">*</span></p>
+                    <input type="file" multiple accept="image/png, image/jpg" id="images" name="images" required>
+                </div>
+
+                <input type="submit" value="Enviar" class="btn-submit">
+            
             </form>
         </div>
 

@@ -1,0 +1,201 @@
+body {
+    padding-bottom: 500px;
+}
+
+/* Flex */
+.flex {
+    display: flex;
+    background-color: aqua;
+    margin-bottom: 20px;
+}
+
+/* Flex-column */
+.flex-column {
+    display: flex;
+    background-color: blueviolet;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+/* Flex-wrap */
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.box {
+    height: 50px;
+    width: 33%;
+    border: 2px solid purple;
+}
+
+/* Justify content (alinhamento na horizontal/row)*/
+/* center */
+.center, .space-around, .space-between, .end {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.center .box, .space-around .box, .space-between .box, .end .box {
+    width: 50px;
+}
+
+.center {
+    justify-content: center;
+}
+
+/* space around */
+.space-around {
+    justify-content: space-around;
+}
+
+/* space between */
+.space-between {
+    justify-content: space-between;
+}
+
+/* end */
+.end {
+    justify-content: end;
+}
+
+
+/* align items (alinhamento vertical */
+.align-center, .flex-end, .stretch {
+    display: flex;
+    margin-bottom: 20px;
+    height: 200px;
+    border: 1px solid green;
+}
+
+.align-center .box, .flex-end .box, .stretch .box {
+    width: 50px;
+}
+
+/* center */
+.align-center {
+    align-items: center;
+    justify-content: center;
+}
+
+/* end */
+.flex-end {
+    align-items: flex-end;
+}
+
+/* stretch (nesse exemplo em especifico teve que colocar um height auto ali pq na div pai ja tinha uma height fixa*/
+.stretch {
+    align-items: stretch;
+}
+
+.stretch .box { 
+    height: auto; 
+}
+
+
+/* gap */
+.gap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid orangered;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.gap .box {
+    width: 30%;
+}
+
+/* order */
+.order {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#one {
+    order: 1;
+}
+
+#two {
+    order: 2;
+}
+
+#three {
+    order: 3;
+}
+
+
+/* grow */
+.grow {
+    display: flex;
+}
+
+.grow .box {
+    flex: 1;
+}
+
+.grow .big {
+    flex: 2;
+}
+
+
+/* basis */
+.basis {
+    display: flex;
+}
+
+.basis .box {
+    flex-basis: 20px;
+}
+
+.basis .big {
+    flex-grow: 1;
+}
+
+
+/* shrink */
+.shrink {
+    display: flex;
+}
+
+.shrink .box {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 250px;
+    width: auto;
+}
+
+.shrink .small {
+    flex-shrink: 2;
+}
+
+
+/* flex shorthand */
+.shorthand {
+    display: flex;
+}
+
+.shorthand .box {
+    width: auto;
+    flex: 1 1 250px;
+}
+
+.shorthand .different {
+    flex: 4 1 500px;
+}
+
+
+/* auto alinhamento */
+.auto-alignment {
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    border: 2px solid darkblue;
+}
+
+.auto-alignment .different {
+    align-self: center;
+}
+

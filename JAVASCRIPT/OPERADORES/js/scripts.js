@@ -16,3 +16,21 @@ console.log('Espaçamento \t em tab'); // \t da um espaçamento de tab no texto
 
 // 4 - Template Strings (interpolação)
 console.log(`A soma de 2 + 2 é igual a ${2+2}`);
+
+// 5 - Comparações
+console.log(10 < 9);
+console.log (10 == 10);
+console.log(5 == 4);
+console.log(3 != 1);
+
+// 6 -Idêntico (esse operador avalia até o TIPO de dado)
+console.log(5 == "5");
+console.log(5 === "5");
+
+console.log(5 != "5");
+console.log(5 !== "5");
+
+// 7 - Operadores lógicos
+// && E
+// || ou
+// ! não (negativo) inverte a comparação

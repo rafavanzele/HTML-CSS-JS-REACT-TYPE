@@ -155,3 +155,81 @@ console.log(myElements.indexOf('uva'))
 console.log(myElements.lastIndexOf('uva'))
 //obs.: quando o elemento não existe, em ambos os casos o índice aparece como -1. Veja exemplo:
 console.log(myElements.indexOf('açaí'))
+
+
+
+// 13 - MÉTODO DE ARRAY SLICE (muito util quando se quer extrair um array menor de um array maior, ou seja, extrair um intervalo de elementos de dentro de um array)
+const testeSlice = ['arroz', 'feijão', 'batata', 'omelete', 'salada', 'carne']
+
+const subTesteSlice = testeSlice.slice(1, 3 + 1) //aqui se coloca o +1 pro subarray vir completo, ou seja, do 1 ao 3
+
+console.log(subTesteSlice)
+console.log(testeSlice)
+// se colocar um intervalos de dados que não existe, o retorno dele no console.log será []
+
+const subTesteSlice2 = testeSlice.slice(3) //neste exemplo, o subarray 'extraído' será do indice 3 até o final
+console.log(subTesteSlice2)
+
+
+
+// 14 - MÉTODO FOREACH (é igual um FOR e WHILE, porém é um método)
+const numbs = [1, 2, 3, 4]
+
+numbs.forEach((numb) => {
+    console.log(`O número é ${numb}`)
+})
+
+
+const movies = [
+    {title: 'A Bruxa', category: 'terror'},
+    {title: 'Anjos Caídos', category: 'romance'},
+    {title: 'Saneamento Básico', category: 'comédia'},
+]
+
+movies.forEach((movie) => {
+    console.log(`Exibindo o filme ${movie.title} da categoria ${movie.category}`)
+})
+
+
+
+// 15 - MÉTODOS INCLUDES (utilizado para saber se existe um determinado elemento dentro do array)
+//15.a
+const colors = ['azul', 'amarelo', 'roxo', 'cinza', 'vermelho']
+
+console.log(colors.includes('amarelo')) //ele vai retornar um dado booleano
+
+console.log(colors.includes('laranja'))
+
+//15.b
+const food = ['hamburger', 'batata-frita', 'salada', 'peixe', 'macarrão']
+
+if(food.includes('macarrão')) {
+    console.log('Há macarrão no cardápio hoje')
+}
+
+
+
+// 16 - MÉTODO REVERSE (usado para inverter a ordem dos elementos de um array. MUITO CUIDADO AO USAR ELE)
+const testeReverse = [1, 2, 3, 4, 5]
+
+testeReverse.reverse()
+console.log(testeReverse)
+
+
+
+// 17 - MÉTODOS EM STRINGS: TRIM (ele elimina tudo que não é texto em uma string, por exemplo caracteres especias e espaçamentos)
+const trimTest = ' testando     '
+
+console.log(trimTest)
+console.log(trimTest.trim())
+
+console.log(trimTest.length)
+console.log(trimTest.trim().length)
+
+
+
+// 18 - MÉTODO SPLIT (esse método divide uma string em um array/lista)
+const frase = 'Quem mexeu no meu queijo'
+
+const arrayDaFrase =  frase.split(' ') //aqui meu argumento é que a cada espaço haja um split
+console.log(arrayDaFrase)

@@ -233,3 +233,107 @@ const frase = 'Quem mexeu no meu queijo'
 
 const arrayDaFrase =  frase.split(' ') //aqui meu argumento é que a cada espaço haja um split
 console.log(arrayDaFrase)
+
+
+
+// 19 - MÉTODO JOIN (no prcesso reverso, esse método transforma uma lista/array em string)
+const fraseDenovo = arrayDaFrase.join(' ')
+console.log(fraseDenovo)
+
+// exemplo de uma lista de compras:
+const itensParaComprar = ['arroz', 'feijão', 'macarrão', 'farinha']
+
+const fraseDeCompra = `Precisamos comprar: ${itensParaComprar.join(', ')}.`
+console.log(fraseDeCompra)
+
+
+
+// 20 - MÉTODO REPEAT 
+const repetir = 'testando '
+console.log(repetir.repeat(4))
+
+
+
+// 21 - ARRAY - REST OPERATOR/REST PARAMETERS (caracterizado pelo simbolo ...(reticências), é muito utilizado para uma determinada função receber indefinidos argumentos. Assim não precisamos declarar exatamente o que receber, deixando a funçao mais ampla)
+const somaInfinita = (...args) => { //aqui usei as ... como argumento, pra durante o uso do programa add qtos 'i' eu quiser
+    let total = 0
+
+    for(i = 0; i < args.length; i++) {
+        total += args[i]
+    }
+
+    return total
+}
+
+console.log(somaInfinita(1, 10, 1000))
+console.log(somaInfinita(2, 34, 456, 567, 744, 345, 987))
+
+
+
+// 22 - ARRAYS: FOR OF (mesma função do 'for' mas com sintaxe simplificada)
+const somaInfinita2 = (...args) => {
+    let total = 0
+
+    for(num of args) { //traduzinho: para cada 'numero' do 'argumento'
+        total += num
+    }
+
+    return total
+}
+
+console.log(somaInfinita2(3, 4, 6, 8))
+
+
+
+// 23 - DESTRUCTURING EM OBJETOS (nos permite desestruturar algum dado. No caso do objeto, é possível criar variáveis a partir de suas propriedades)
+// 23.a
+const dadosPessoais = {
+    firstName: 'Rafael',
+    lastName: 'Gomes',
+    age: 37,
+}
+
+//tradicionalmente desestrutuaria assim:
+//const firstName = dadosPessoais.firstName
+//const lastName = dadosPessoais.lastName
+//const age = dadosPessoais.age
+
+//usando método moderno:
+const {firstName, lastName, age} = dadosPessoais
+console.log(firstName, lastName, age)
+console.log(typeof dadosPessoais)
+
+// 23.b renomeando propriedades (supondo que exista duas variáveis com nome repetido)
+const {firstName: primeiroNome} = dadosPessoais
+console.log(primeiroNome)
+
+
+
+// 24 - DESTRUCTURING EM ARRAYS (mesma lógica de objetos mas como não existe nome de propriedade, é o índice que vai contar pq array é uma lista)
+const myList = ['Casa', 'Apartamento', 'Kitchnet']
+
+const [imovelA, imovelB, imovelC] = myList
+console.log(imovelA, imovelB, imovelC)
+
+
+
+// 25 - JSON (JavaScript Object Notation, é um dado de texto. Extremamente importante, funciona como ponte entre back e frontend. Formatação super rigorosa, por exemplo: usa apenas aspas duplas e não aceita comentário. Geralmente não criamos o dado na unha, nós ja recebemos pronto)
+const myJson = '{"name": "Rafael", "age": 37, "hobbies": ["ler", "cinema", "malhar"]}'
+
+
+
+// 26 - CONVERTANDO JSON PARA OBJETO E CONVERTENDO OBJETO PARA JSON (o JSON puro não tem utilidade pra gente. Ele precisa ser convertido em objeto, por exemplo)
+// 26.a convertendo o JSON acima em objeto
+const myObject = JSON.parse(myJson)
+console.log(myObject)
+
+//add um novo dado ao objeto
+myObject.adress = 'Santo André'
+console.log(myObject)
+
+//o objeto foi manipulado e quero converter em JSON novamente
+const myNewJson = JSON.stringify(myObject)
+console.log(myNewJson)
+
+
+

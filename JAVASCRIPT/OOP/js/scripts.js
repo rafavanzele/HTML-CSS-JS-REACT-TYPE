@@ -160,3 +160,58 @@ const boing = new Aviao('Boing', 10)
 console.log(boing)
 //ou posso imprimir assim:
 console.log(boing[asas])
+
+
+
+// 10 - GETTERS E SETTERS (GET é um método usado para conseguir/exibir o valor de uma propriedade. SET é um método utilizado para alterar o valor de uma propriedade)
+class Post {
+    constructor(titulo, descricao, tags) {
+        this.titulo = titulo
+        this.descricao = descricao
+        this.tags = tags
+    }
+
+    get exibirTitulo() {
+        return `Você está lendo ${this.titulo}`
+    }
+
+    set adicionarTags(tags) {
+        const tagsArray = tags.split(', ')
+        this.tags = tagsArray
+    }
+}
+
+const myPost = new Post('Algum post', 'É um post sobre programação')
+console.log(myPost)
+console.log(myPost.exibirTitulo)
+
+myPost.adicionarTags = 'programação, javascript, js'
+console.log(myPost) 
+
+
+
+// 11 - HERANÇA (semelhante ao prototype, um classe pode herdar propriedades de outra por meio de herança. Utilizamos a palavra chave EXTENDS para add a classe que vai trazer as propriedadese SUPER para enviar os valores para a classe pai)
+class Mamifero {
+    constructor(patas) {
+        this.patas = patas
+    }
+}
+
+
+class Lobo extends Mamifero { //estoou pegando 'patas' de 'mamiferos'
+    constructor(patas, nome) {
+        super(patas, patas) //estou herdando da classe pai e enviando o patas de volta pra alterar o valor de patas da classe pai 'mamifero'
+        this.nome = nome
+    }
+}
+
+const fred = new Lobo(4, 'Fred')
+console.log(fred)
+
+
+
+// 12 - INSTANCEOF (assim como o typeof varifica o tipo, o instanceof verifica se um objeto é pai de outro. Só pode ser verificado entre  objeto => classe, e nunca classe vs classe)
+//testando nos objetos ja criado anteriormente:
+console.log(fred instanceof Lobo) // o fred é uma instanciade/herança de Lobo? true
+console.log(Lobo instanceof Mamifero) // a classe lobo é uma herança de mamifero? false (pq nao posso comparar duas classes)
+console.log(new Lobo(4, 'Fred') instanceof Mamifero) // o objeto 'new Lobo' é herdeiro de Mamifero? true (pq é um objto vs classe)

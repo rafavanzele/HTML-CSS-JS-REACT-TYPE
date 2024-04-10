@@ -45,3 +45,53 @@ Promise.resolve(4 * 'asd')
 })
 
 .catch((error) => console.log(`Um erro ocorreu ${error}`))
+
+
+
+// 5 - ASYNC FUNCTION (muito parecido com a sintaxe do arrow function, async function retornam promises)
+async function somarComDelay(a, b) {
+    return a + b
+}
+
+//como essa async function me retorna uma promise, posso usar métodos de promises, como o '.then'
+somarComDelay(10, 15).then((value) => {
+    console.log(`O valor da soma é: ${value}`)
+})
+
+console.log('Mais um teste async')
+
+
+
+// 6 - ASYNC AWAIT / INSTRUÇÃO AWAIT (quando se cria uma async function, é quase o mesmo que criar uma promise. Usa-se o async await, para aguardar o resultado de uma async function mas sem lidar diretamente com promise)
+function resolveComDelay() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve('Resolveu a Promise')
+        }, 4000)
+    })
+}
+
+async function chamadaAsync() {
+    console.log('Chamando a Promise, e esperando o resultado')
+    const result = await resolveComDelay()
+    console.log(`O resultado chegou: ${result}`)
+}
+
+chamadaAsync()
+
+
+
+// 7 - GENERATORS (pouco utlizado, são muito parecidos com promises. As ações podem ser pausadas e retomadas depois.)
+function* generator() { //toda função com '*' é um generator
+ yield 1
+ yield 2
+ yield 3
+ yield 4
+}
+
+const gen = generator()
+
+//obs: a cada execução o generator vai me retornar um valor (yield) diferente
+console.log(gen.next().value)
+console.log(gen.next().value)
+console.log(gen.next().value)

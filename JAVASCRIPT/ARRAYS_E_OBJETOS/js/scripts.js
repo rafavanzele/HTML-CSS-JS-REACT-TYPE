@@ -337,3 +337,20 @@ console.log(myNewJson)
 
 
 
+// 27 - SPREAD OPERATOR (recurso utilizado em arrays e objetos. Serve para inserir novos valores a um objeto ou array, e até mesmo para unir dois arrays)
+const ar1 = [1, 2, 3]
+const ar2 = ['a', 'b', 'c']
+
+const ar3 = [...ar1, ...ar2]
+console.log(ar3)
+
+const ar4 = [0, ...ar3, 'd']
+console.log(ar4)
+
+// Imagine o seguinte exemplo: um mesmo item com várias informações espalhadas pelo código e vc quer juntá-las todas em um único array/objeto:
+const carName = {name: 'Gol'}
+const carBrand = {brand: 'VW'}
+const otherInfos = {km: 10000, price: 35000}
+
+const myCar = {...carName, ...carBrand, ...otherInfos}
+console.log(myCar)

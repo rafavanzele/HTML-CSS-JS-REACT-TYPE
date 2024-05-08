@@ -7,10 +7,30 @@
     <title>Axios</title>
     <!-- Abaixo o link para importar a biblioteca axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/global.js"></script>
+    
     <script src="js/scripts.js" defer></script>
 </head>
 <body>
     <h1>Axios</h1>
+
+
+    <!-- 4 - REQUISIÇÃO DE POST -->
+    <h2>Insira um novo post:</h2>
+
+    <form id="post-form">
+        <div>
+            <input type="text" id="title" placeholder="Digite um titulo">
+        </div>
+
+        <div>
+            <textarea id="body"></textarea>
+        </div>
+
+        <input type="submit" value="Criar post">
+    </form>
+
+
 
     <!-- 3 - INSERINDO DADOS DE UMA API DE TERCEIRO -->
     <div id="user-container"></div>

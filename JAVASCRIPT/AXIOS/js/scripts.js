@@ -54,3 +54,21 @@ const printData = async() => {
 }
 
 printData()
+
+
+
+// 4 - REQUISIÇÃO DE POST (em axios quando queremos enviar dados para o servidor usamos o POST, por exemplo para salvar dados no banco. É necessario configurar a propriedade body com os dados a serem enviados)
+const form = document.querySelector('#post-form')
+const titleInput = document.querySelector('#title')
+const bodyInput = document.querySelector('#body')
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    // vou indicar para onde os dados devem ser enviados (atenção, aqui vou ter dois parâmetros):
+    axios.post('https://jsonplaceholder.typicode.com/posts', {
+        title: titleInput.value,
+        body: bodyInput.value, 
+        userId: 1
+    })
+})

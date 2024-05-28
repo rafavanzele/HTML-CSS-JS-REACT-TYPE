@@ -3,6 +3,8 @@ import './App.css'
 import chuva2 from './assets/chuva2.jpg'
 // USESTATE
 import Data from './components/Data'
+// RENDERIZAÇÃO DE LISTA
+import ListRender from './components/ListRender'
 
 function App() {
   
@@ -17,6 +19,9 @@ function App() {
 
       {/* USESTATE */}
       <Data/>
+
+      {/* RENDERIZAÇÃO DE LISTA */}
+      <ListRender/>
     </div>
   )
 }

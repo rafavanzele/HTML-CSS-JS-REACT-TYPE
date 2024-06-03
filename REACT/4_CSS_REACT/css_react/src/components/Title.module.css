@@ -1,0 +1,7 @@
+/* CSS SCOPED (jeito mais utilizado de aplicar css de forma que os estilos nao 'vazem' de um componente para outros. Para isso usamos a extensao '.module.css'). Obs.: module.css geralmente estiliza-se por classes! */
+
+.title {
+    color: orangered;
+    background-color: navy;
+    padding: 10px;
+}

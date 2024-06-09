@@ -1,0 +1,21 @@
+{
+    "products": [
+        {
+            "name": "tênis",
+            "price": "200.00",
+            "id": 5
+        },
+
+        {
+            "name": "bermuda",
+            "price": "55.00",
+            "id": 6
+        },
+
+        {
+            "name": "camiseta",
+            "price": "49.90",
+            "id": 7
+        }
+    ]
+}

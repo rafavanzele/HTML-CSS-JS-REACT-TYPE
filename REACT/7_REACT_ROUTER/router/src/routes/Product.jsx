@@ -1,6 +1,6 @@
 // mostrando detalhes dos produtos na home
 import { useFetch } from "../hooks/useFetch"
-import { useParams } from "react-router-dom"
+import { useParams, Link } from "react-router-dom"
 
 const Product = () => {
     const {id} = useParams()
@@ -18,6 +18,9 @@ const Product = () => {
         <div>
             <h1>{product.name}</h1>
             <h2>R${product.price}</h2>
+
+            {/* ROTAS ANINHADAS/NESTED ROUTS*/}
+            <Link to={`/products/${product.id}/info`}>Mais informações</Link>
         </div>
     </div>
   )

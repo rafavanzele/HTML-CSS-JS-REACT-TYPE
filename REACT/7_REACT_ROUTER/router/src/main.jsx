@@ -14,6 +14,9 @@ import Contact from './routes/Contact.jsx'
 import ErrorPage from './routes/ErrorPage.jsx'
 // carregamento dinamico
 import Product from './routes/Product.jsx'
+// rotas aninhadas/nested routs
+import Info from './routes/Info.jsx'
+
 
 const router = createBrowserRouter([
   {
@@ -37,6 +40,12 @@ const router = createBrowserRouter([
       {
         path: 'products/:id',
         element: <Product/>
+      },
+
+      // ROTAS ANINHADAS/NESTED ROUTS
+      {
+        path: 'products/:id/info',
+        element: <Info/>
       }
     ]
   },

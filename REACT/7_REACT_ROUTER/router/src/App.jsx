@@ -1,18 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
+// COMPONENTE BASE
 import { Outlet } from 'react-router-dom'
 
-function App() {
-  const [count, setCount] = useState(0)
+// LINK ENTRE PÁGINAS (NAVBAR/MENU)
+import Navbar from './components/Navbar'
 
+function App() {
+  
   return (
     <div className='app'>
-      <p>Navbar</p>
+      <Navbar/>
 
-        <Outlet/>
+      <Outlet/>
 
       <p>Footer</p>
     </div>

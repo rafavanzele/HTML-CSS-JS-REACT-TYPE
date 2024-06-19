@@ -12,6 +12,8 @@ import Home from './routes/Home.jsx'
 // COMPONENTES/ROUTES/PÁGINAS
 import Contact from './routes/Contact.jsx'
 import ErrorPage from './routes/ErrorPage.jsx'
+// carregamento dinamico
+import Product from './routes/Product.jsx'
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,12 @@ const router = createBrowserRouter([
       {
         path: 'contact',
         element: <Contact/>
+      },
+
+      // CARREGAMENTO DINÂMICO
+      {
+        path: 'products/:id',
+        element: <Product/>
       }
     ]
   },

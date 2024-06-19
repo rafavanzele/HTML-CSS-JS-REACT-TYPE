@@ -6,6 +6,8 @@ import './index.css'
 // CONFIGURANDO ROUTER
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom'
 
+// COMPONENTE BASE
+import Home from './routes/Home.jsx'
 
 // COMPONENTES/ROUTES/PÁGINAS
 import Contact from './routes/Contact.jsx'
@@ -15,14 +17,28 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App/>,
-    // Adicionando página de erro ao home:
-    errorElement: <ErrorPage/>
+    // Adicionando página de erro:
+    errorElement: <ErrorPage/>,
+    // Componente base:
+    children: [
+      {
+        path: '/',
+        element: <Home/>
+      },
+
+      {
+        path: 'contact',
+        element: <Contact/>
+      }
+    ]
   },
 
+  {/*
   {
     path:'contact',
     element: <Contact/>
   }
+*/}
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

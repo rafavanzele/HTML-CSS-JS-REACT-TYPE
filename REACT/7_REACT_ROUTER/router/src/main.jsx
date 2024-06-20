@@ -4,7 +4,7 @@ import App from './App.jsx'
 import './index.css'
 
 // CONFIGURANDO ROUTER
-import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider, Route, Navigate } from 'react-router-dom'
 
 // COMPONENTE BASE
 import Home from './routes/Home.jsx'
@@ -16,6 +16,8 @@ import ErrorPage from './routes/ErrorPage.jsx'
 import Product from './routes/Product.jsx'
 // rotas aninhadas/nested routs
 import Info from './routes/Info.jsx'
+// search
+import Search from './routes/Search.jsx'
 
 
 const router = createBrowserRouter([
@@ -46,6 +48,18 @@ const router = createBrowserRouter([
       {
         path: 'products/:id/info',
         element: <Info/>
+      },
+
+      // SEARCH
+      {
+        path: 'search',
+        element: <Search/>
+      },
+
+      // REDIRECT (exemplo: página teste que existia mas nao existe mais, redireciono pra home)
+      {
+        path: 'teste',
+        element: <Navigate to={'/'}/>
       }
     ]
   },

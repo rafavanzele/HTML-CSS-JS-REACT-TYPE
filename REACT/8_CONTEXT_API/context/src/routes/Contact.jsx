@@ -4,9 +4,12 @@ import { useContext } from "react"
 import { CounterContext } from '../context/CounterContext'
 
 
-const Contact = () => {
-  const {counter} = useContext(CounterContext)
+// 4 REFATORANDO COM HOOK
+import { useCounterContext } from '../hooks/useCounterContext'
 
+const Contact = () => {
+  const { counter } = useCounterContext()
+  
   return (
     <div>
         <h1>Página de contato</h1>

@@ -1,12 +1,19 @@
 // 3 ALTERANDO O VALOR DO CONTEXTO
-import { useContext } from "react"
+//import { useContext } from "react"
+
+//import { CounterContext } from '../context/CounterContext'
 
 import ChangeCounter from "../components/ChangeCounter"
 
-import { CounterContext } from '../context/CounterContext'
+// 4 REFATORANDO COM HOOK
+import { useCounterContext } from '../hooks/useCounterContext'
+
 
 const Home = () => {
-  const {counter} = useContext(CounterContext)
+  //const {counter} = useContext(CounterContext)
+
+  // 4 REFATORANDO COM HOOK
+  const { counter } = useCounterContext()
 
   return (
     <div>

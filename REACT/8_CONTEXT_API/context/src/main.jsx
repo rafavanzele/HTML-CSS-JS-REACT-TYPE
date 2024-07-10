@@ -15,6 +15,9 @@ import Contact from './routes/Contact.jsx'
 // 2 CRIANDO PROVIDER
 import { CounterContextProvider } from './context/CounterContext.jsx'
 
+// 5 CRIANTO CONTEXTO MAIS COMPLEXO
+import { TitleColorContextProvider } from './context/TitleColorContext.jsx'
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -42,7 +45,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     
     <CounterContextProvider>
-      <RouterProvider router={router} />
+      
+      <TitleColorContextProvider>
+        <RouterProvider router={router} />
+      </TitleColorContextProvider>
+      
     </CounterContextProvider>
     
   </React.StrictMode>,

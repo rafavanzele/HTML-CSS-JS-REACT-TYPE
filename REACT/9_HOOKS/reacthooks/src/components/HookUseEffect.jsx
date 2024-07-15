@@ -51,6 +51,8 @@ const HookUseEffect = () => {
         <h3>3.2 UseEffect e array de dependencias com valor</h3>
         <p>Another Number: {anotherNumber}</p>
         <button onClick={() => setAnotherNumber(anotherNumber + 1)}>Mudar o another</button>
+
+        <hr />
     </div>
   )
 }

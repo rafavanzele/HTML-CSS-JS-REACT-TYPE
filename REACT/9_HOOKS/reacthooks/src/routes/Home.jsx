@@ -5,6 +5,8 @@ import HookUseEffect from '../components/HookUseEffect'
 import { useContext } from 'react'
 import { SomeContext } from '../components/HookUseContext'
 import HookUseRef from '../components/HookUseRef'
+import HookUseCallBack from '../components/HookUseCallBack'
+import HookUseMemo from '../components/HookUseMemo'
 
 const Home = () => {
   // 4 USECONTEXT
@@ -31,6 +33,16 @@ const Home = () => {
 
       {/* 5 USEREF */}
       <HookUseRef/>
+
+      <hr />
+
+      {/* 6 USECALLBACK */}
+      <HookUseCallBack/>
+
+      <hr />
+
+      {/* 7 USEMEMO */}
+      <HookUseMemo/>
 
       <hr />
     </div>

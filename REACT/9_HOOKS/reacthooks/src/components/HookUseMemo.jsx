@@ -15,7 +15,7 @@ const HookUseMemo = () => {
 
   return (
     <div>
-        <h2>7 UseMemo</h2>
+        <h2>7. UseMemo</h2>
         <input type="text" onChange={(e) => setNumber(e.target.value)} />
         {premiumNumbers.includes(number) ? <p>Acertou o número!</p> : ''}
     </div>

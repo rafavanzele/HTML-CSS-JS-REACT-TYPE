@@ -12,7 +12,7 @@ const HookUseCallBack = () => {
 
   return (
     <div>
-        <h2>6 UseCallBack</h2>
+        <h2>6. UseCallBack</h2>
         <List getItems={getItemsFromDatabase}/>
 
         <button onClick={() => setCounter(counter + 1)}>Alterar!</button>

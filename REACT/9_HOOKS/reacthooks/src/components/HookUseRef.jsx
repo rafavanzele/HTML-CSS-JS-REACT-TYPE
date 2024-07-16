@@ -26,7 +26,7 @@ const HookUseRef = () => {
 
   return (
     <div>
-        <h2>5 UseRef</h2>
+        <h2>5. UseRef</h2>
         <p>O componente renderizou: {numberRef.current}</p>
 
         <p>Counter 1: {counter}</p>

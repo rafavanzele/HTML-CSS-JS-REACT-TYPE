@@ -7,6 +7,9 @@ import { SomeContext } from '../components/HookUseContext'
 import HookUseRef from '../components/HookUseRef'
 import HookUseCallBack from '../components/HookUseCallBack'
 import HookUseMemo from '../components/HookUseMemo'
+import HookUseLayoutEffect from '../components/HookUseLayoutEffect'
+import HookUseImperativeHandle from '../components/HookUseImperativeHandle'
+import HookCustom from '../components/HookCustom'
 
 const Home = () => {
   // 4 USECONTEXT
@@ -26,7 +29,7 @@ const Home = () => {
       <HookUseEffect/>
 
       {/* 4 USECONTEXT */}
-      <h2>4 UseContext</h2>
+      <h2>4. UseContext</h2>
       <p>Valor do contexto: {contextValue}</p>
 
       <hr />
@@ -43,6 +46,19 @@ const Home = () => {
 
       {/* 7 USEMEMO */}
       <HookUseMemo/>
+
+      <hr />
+
+      {/* 8 USELAYOUTEFFECT */}
+      <HookUseLayoutEffect/>
+
+      {/* 9 USEIMPERATIVEHANDLE */}
+      <HookUseImperativeHandle/>
+
+      <hr />
+
+      {/* 10 CUSTOMHOOK */}
+      <HookCustom/>
 
       <hr />
     </div>

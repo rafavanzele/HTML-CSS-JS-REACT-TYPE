@@ -7,8 +7,8 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <h1>Typescript com React</h1>
+    <div className="app">
+      <h1>React + Type</h1>
     </div>
   )
 }
